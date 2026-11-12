@@ -31,8 +31,7 @@ dev = [
 dev = [
     "pytest",
 ]
-[tool.hatch.build.targets.wheel]
-packages = ["tasks"]
+
 
 [tool.flake8]
 max-line-length = 120
