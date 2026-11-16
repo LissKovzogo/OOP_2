@@ -1,9 +1,9 @@
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Zadania')))
+
 # tests/test_z2.py
 import pytest
-from z_2 import Account
+from oop_2.Zadania.z_2 import Account
 
 def test_account_init_invalid():
     with pytest.raises(ValueError):

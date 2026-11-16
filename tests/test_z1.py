@@ -1,9 +1,8 @@
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Zadania')))
 # tests/test_z1.py
 import pytest
-from z_1 import Pair, make_time
+from oop_2.Zadania.z_1 import Pair, make_time
 
 def test_pair_init_valid():
     p = Pair(2, 30)
