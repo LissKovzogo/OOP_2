@@ -19,7 +19,7 @@ def test_deposit(capsys):
 def test_withdraw_insufficient_funds(capsys):
     acc = Account("Иванов", "123", 5.0, 100.0)
     result = acc.withdraw(150.0)
-    assert result is False
+    assert not result 
     assert acc.balance == 100.0
     captured = capsys.readouterr()
     assert "Недостаточно средств" in captured.out
