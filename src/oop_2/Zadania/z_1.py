@@ -20,6 +20,11 @@
 class Pair:
 
     def __init__(self, first=0, second=0):
+        if not isinstance(first, int) or isinstance(first, bool):
+            raise TypeError("Поле 'часы' должно быть целым числом.")
+        if not isinstance(second, int) or isinstance(second, bool):
+            raise TypeError("Поле 'минуты' должно быть целым числом.")
+            
         if first < 0 or second < 0:
             raise ValueError("Аргументы должны быть положительными числами.")
         if second >= 60:
