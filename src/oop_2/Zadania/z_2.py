@@ -22,9 +22,15 @@
 
 class Account:
     def __init__(self, surname="", account_number="", interest_rate=0.0, balance=0.0):
-        if not isinstance(balance, (int, float)) or balance < 0:
+        if not isinstance(balance, (int, float)) or isinstance(balance, bool):
+            raise TypeError("Сумма на счете должна быть числом.")
+
+        if not isinstance(interest_rate, (int, float)) or isinstance(interest_rate, bool):
+            raise TypeError("Процент начисления должен быть числом.")
+
+        if balance < 0:
             raise ValueError("Сумма на счете не может быть отрицательной.")
-        if not isinstance(interest_rate, (int, float)) or interest_rate < 0:
+        if interest_rate < 0:
             raise ValueError("Процент начисления не может быть отрицательным.")
 
         self.surname = surname
